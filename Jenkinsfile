@@ -10,8 +10,19 @@ pipeline {
       }
     }
     stage('Test') {
-      steps {
-        echo 'Testing Completed...'
+      parallel {
+        stage('Test1') {
+          steps {
+            echo 'First test completed'
+          }
+        }
+
+        stage('Test2') {
+          steps {
+            echo 'Second test completed'
+          }
+        }
+
       }
     }
     stage('Deploy') {
