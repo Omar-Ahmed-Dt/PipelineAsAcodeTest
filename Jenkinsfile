@@ -4,9 +4,9 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Buil Completed...'
-        timeout(time: 5, unit: 'SECONDS') {
-          sh 'sleep 2'
-        }
+ //       timeout(time: 5, unit: 'SECONDS') {
+ //         sh 'sleep 2'
+ //       }
       }
     }
     stage('Test') {
